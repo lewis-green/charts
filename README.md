@@ -10,7 +10,7 @@ Please refer to Helm's [documentation](https://helm.sh/docs/) to get started.
 Once Helm is set up properly, add the repo as follows:
 
 ```shell
-helm repo add lewis-green https://lewis-green.github.io/charts
+helm repo add lewis-green https://charts.lewisgreen.co.uk/charts
 ```
 
 You can then run `helm search repo lewis-green` to see the charts.
