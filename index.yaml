@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  keycloak:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-19T14:43:33.527795685Z"
+    description: Keycloak
+    digest: cc6d830d691bf08ef80a7a2e4e94e215ba9f2f4baaf680bc576c295b0b439be4
+    home: https://github.com/lewis-green/charts
+    keywords:
+    - keycloak
+    - oauth
+    - saml
+    maintainers:
+    - email: lewis@lewisgreen.co.uk
+      name: Lewis Green
+    name: keycloak
+    sources:
+    - https://keycloak.org
+    - https://github.com/lewis-green/charts
+    urls:
+    - https://github.com/lewis-green/charts/releases/download/keycloak-0.1.0/keycloak-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-08-19T14:43:33.527800786Z"
