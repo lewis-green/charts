@@ -1,6 +1,6 @@
 # Kubernetes Helm Charts
 
-[![Release Charts](https://github.com/lewis-green/charts/actions/workflows/release.yml/badge.svg)](https://github.com/blackhorseya/helm-charts/actions/workflows/release.yml)
+[![Release Charts](https://github.com/lewis-green/charts/actions/workflows/release.yml/badge.svg)](https://github.com/lewis-green/charts/actions/workflows/release.yml)
 
 ## Usage
 
