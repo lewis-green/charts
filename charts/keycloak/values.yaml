@@ -1,0 +1,26 @@
+ingress:
+  host: keycloak.domain
+  className: ""
+  certManagerIssuer: "letsencrypt"
+
+image:
+  registry: core.harbor.jsm.systems/jsm
+  name: keycloak-jsm
+  tag: latest
+  pullPolicy: Always
+  credentials:
+    username: ''
+    password: ''
+
+persistence:
+  config:
+    enabled: false
+
+keycloak:
+  hostName: keycloak.local
+  databaseName: keycloak
+  databaseUrl: jdbc:sqlserver://dbhost;DatabaseName=keycloak
+  databaseUser: sa
+  databasePassword: 'sa!'
+  adminUser: admin
+  adminPassword: 'admin'

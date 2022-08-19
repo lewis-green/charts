@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-keycloak
+  labels:
+    app: keycloak
+spec:
+  selector:
+    matchLabels:
+      app: keycloak
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: keycloak
+    spec:
+      containers:
+        - name: keycloak
+          image: {{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: KC_DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: KC_DB_USERNAME
+            - name: KC_HOSTNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: KC_HOSTNAME
+            - name: KC_HTTP_ENABLED
+              value: 'true'
+            - name: KC_HOSTNAME_STRICT
+              value: 'false'
+            - name: KC_HOSTNAME_STRICT_HTTPS
+              value: 'false'
+            - name: KC_PROXY
+              value: edge
+            - name: KC_DB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: KC_DB_URL
+            - name: KEYCLOAK_ADMIN
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-configmap
+                  key: KEYCLOAK_ADMIN
+            - name: KC_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-passwords
+                  key: db-password
+            - name: KEYCLOAK_ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-passwords
+                  key: admin-password
+      imagePullSecrets:
+        - name: {{ .Release.Name }}-harbor

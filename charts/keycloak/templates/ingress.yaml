@@ -1,0 +1,53 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-ingress
+  annotations:
+{{- if .Values.ingress.certManagerIssuer }}
+    cert-manager.io/cluster-issuer: "{{ .Values.ingress.certManagerIssuer }}"
+{{- end }}
+spec:
+  ingressClassName: {{ .Values.ingress.className }}
+  tls:
+    - hosts:
+      - {{ .Values.keycloak.hostName }}
+      secretName: {{ .Release.Name }}-credentials
+  rules:
+  - host: {{ .Values.keycloak.hostName }}
+    http:
+      paths:
+      - path: /admin
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}-keycloak
+            port:
+              number: 8080
+      - path: /js
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}-keycloak
+            port:
+              number: 8080
+      - path: /realms
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}-keycloak
+            port:
+              number: 8080
+      - path: /resources
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}-keycloak
+            port:
+              number: 8080
+      - path: /robots.txt
+        pathType: Exact
+        backend:
+          service:
+            name: {{ .Release.Name }}-keycloak
+            port:
+              number: 8080

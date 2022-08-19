@@ -1,0 +1,16 @@
+apiVersion: v2
+appVersion: "1.16.0"
+name: keycloak
+description: Keycloak
+version: 0.1.0
+keywords:
+  - keycloak
+  - oauth
+  - saml
+home: https://github.com/lewis-green/charts
+sources:
+  - https://keycloak.org
+  - https://github.com/lewis-green/charts
+maintainers:
+  - name: Lewis Green
+    email: lewis@lewisgreen.co.uk
