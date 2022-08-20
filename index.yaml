@@ -40,4 +40,30 @@ entries:
     urls:
     - https://github.com/lewis-green/charts/releases/download/keycloak-0.1.0/keycloak-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-19T15:52:06.401508696Z"
+  node-red:
+  - apiVersion: v2
+    appVersion: 3.0.2
+    created: "2022-08-20T13:39:05.726082859Z"
+    dependencies:
+    - name: common
+      repository: https://charts.lewisgreen.co.uk
+      version: 0.1.0
+    description: Node-RED is low-code programming for event-driven applications
+    digest: 4a57862f6b5bea618d6e6fb4be12dde7cc122893fd0e076e0724ade1ef46964e
+    home: https://github.com/lewis-green/charts/tree/main/charts/node-red
+    icon: https://nodered.org/about/resources/media/node-red-icon-2.png
+    keywords:
+    - nodered
+    - node-red
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: lewis@lewisgreen.co.uk
+      name: lewis-green
+    name: node-red
+    sources:
+    - https://github.com/node-red/node-red-docker
+    - https://github.com/lewis-green/charts/tree/main/charts/node-red
+    urls:
+    - https://github.com/lewis-green/charts/releases/download/node-red-1.0.0/node-red-1.0.0.tgz
+    version: 1.0.0
+generated: "2022-08-20T13:39:05.726089859Z"
