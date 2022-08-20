@@ -18,5 +18,5 @@ maintainers:
     email: lewis@lewisgreen.co.uk
 dependencies:
   - name: common
-    repository: https://charts.lewisgreen.co.uk/charts
+    repository: https://charts.lewisgreen.co.uk
     version: 0.1.0
