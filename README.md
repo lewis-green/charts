@@ -2,6 +2,8 @@
 
 [![Release Charts](https://github.com/lewis-green/charts/actions/workflows/release.yml/badge.svg)](https://github.com/lewis-green/charts/actions/workflows/release.yml)
 
+Helm charts for all applications I am running on my personal Kubernetes cluster. Some are third party images built into a Helm chart, and some are personally developed images.
+
 ## Usage
 
 [Helm](https://helm.sh) must be installed to use the charts.

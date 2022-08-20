@@ -1,0 +1,22 @@
+---
+apiVersion: v2
+appVersion: 2022.8
+description: Home Assistant
+name: home-assistant
+version: 1.0.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - home-assistant
+  - hass
+home: https://github.com/lewis-green/charts/tree/main/charts/home-assistant
+icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+sources:
+  - https://github.com/home-assistant/home-assistant
+  - https://github.com/lewis-green/charts/tree/main/charts/home-assistant
+maintainers:
+  - name: lewis-green
+    email: lewis@lewisgreen.co.uk
+dependencies:
+  - name: common
+    repository: https://charts.lewisgreen.co.uk
+    version: 0.1.0
