@@ -5,5 +5,5 @@ metadata:
 data:
   KC_HOSTNAME: {{ .Values.keycloak.hostName }}
   KC_DB_USERNAME: {{ .Values.mariadb.auth.username }}
-  KC_DB_URL: jdbc:mariadb://{{ .Release.Name }}-database.{{ .Release.Namespace }}.svc.cluster.local
+  KC_DB_URL: jdbc:mariadb://{{ .Release.Name }}-mariadb.{{ .Release.Namespace }}.svc.cluster.local
   KEYCLOAK_ADMIN: {{ .Values.keycloak.adminUser }}
