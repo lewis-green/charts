@@ -18,6 +18,7 @@ spec:
         - name: keycloak
           image: {{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args: ["start"] 
           ports:
             - containerPort: 8080
           envFrom:
