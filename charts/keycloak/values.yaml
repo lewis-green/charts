@@ -3,13 +3,10 @@ ingress:
   certManagerIssuer: letsencrypt
 
 image:
-  registry: harbor.apps.lewisgreen.co.uk/lewisgreen
-  name: keycloak-mariadb
-  tag: latest
-  pullPolicy: Always
-  credentials:
-    username: ''
-    password: ''
+  registry: quay.io/keycloak
+  name: keycloak
+  tag: 19.0.1
+  pullPolicy: IfNotPresent
 
 persistence:
   config:
