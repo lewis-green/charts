@@ -48,6 +48,31 @@ entries:
   keycloak:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-08-20T17:38:42.988337363Z"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.8
+    description: Keycloak
+    digest: 0b135517c65ea75014fdab97bb97658d77a34d688e67a2f4fb0a0085bc5c4af4
+    home: https://github.com/lewis-green/charts
+    keywords:
+    - keycloak
+    - oauth
+    - saml
+    maintainers:
+    - email: lewis@lewisgreen.co.uk
+      name: Lewis Green
+    name: keycloak
+    sources:
+    - https://keycloak.org
+    - https://github.com/lewis-green/charts
+    urls:
+    - https://github.com/lewis-green/charts/releases/download/keycloak-0.3.0/keycloak-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-08-20T16:40:41.02511376Z"
     dependencies:
     - condition: mariadb.enabled
@@ -167,4 +192,4 @@ entries:
     urls:
     - https://github.com/lewis-green/charts/releases/download/node-red-1.0.0/node-red-1.0.0.tgz
     version: 1.0.0
-generated: "2022-08-20T16:40:41.02516166Z"
+generated: "2022-08-20T17:38:42.988356764Z"
