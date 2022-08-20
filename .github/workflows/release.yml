@@ -21,6 +21,7 @@ jobs:
       - name: Add dependency chart repos
         run: |
           helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm repo add lewis-green https://charts.lewisgreen.co.uk
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.0
         env:
