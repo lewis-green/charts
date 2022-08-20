@@ -34,5 +34,3 @@ spec:
               value: 'false'
             - name: KC_PROXY
               value: edge
-      imagePullSecrets:
-        - name: {{ .Release.Name }}-harbor
