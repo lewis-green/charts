@@ -5,5 +5,9 @@ metadata:
 data:
   KC_HOSTNAME: {{ .Values.keycloak.hostName }}
   KC_DB_USERNAME: {{ .Values.mariadb.auth.username }}
-  KC_DB_URL: jdbc:mariadb://{{ .Release.Name }}-mariadb.{{ .Release.Namespace }}.svc.cluster.local
+  KC_DB_URL: jdbc:mariadb://{{ .Release.Name }}-mariadb.{{ .Release.Namespace }}.svc.cluster.local/{{ .Values.mariadb.auth.database }}
   KEYCLOAK_ADMIN: {{ .Values.keycloak.adminUser }}
+  KC_DB: mariadb
+  KC_HEALTH_ENABLED: 'true'
+  KC_FEATURES: authorization,account-api,impersonation,scripts,token-exchange,client-policies
+  KC_SPI_X509CERT_LOOKUP_PROVIDER: nginx

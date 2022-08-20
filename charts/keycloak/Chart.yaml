@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: "1.16.0"
 name: keycloak
 description: Keycloak
-version: 0.3.0
+version: 0.3.1
 keywords:
   - keycloak
   - oauth
