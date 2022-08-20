@@ -20,17 +20,12 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: {{ .Release.Name }}-keycloak-variables
+            - secretRef:
+                name: {{ .Release.Name }}-keycloak-passwords
           env:
-            - name: KC_DB_USERNAME
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Release.Name }}-configmap
-                  key: KC_DB_USERNAME
-            - name: KC_HOSTNAME
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Release.Name }}-configmap
-                  key: KC_HOSTNAME
             - name: KC_HTTP_ENABLED
               value: 'true'
             - name: KC_HOSTNAME_STRICT
@@ -39,25 +34,5 @@ spec:
               value: 'false'
             - name: KC_PROXY
               value: edge
-            - name: KC_DB_URL
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Release.Name }}-configmap
-                  key: KC_DB_URL
-            - name: KEYCLOAK_ADMIN
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Release.Name }}-configmap
-                  key: KEYCLOAK_ADMIN
-            - name: KC_DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Release.Name }}-passwords
-                  key: db-password
-            - name: KEYCLOAK_ADMIN_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Release.Name }}-passwords
-                  key: admin-password
       imagePullSecrets:
         - name: {{ .Release.Name }}-harbor

@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Release.Name }}-configmap
+  name: {{ .Release.Name }}-keycloak-variables
 data:
   KC_HOSTNAME: {{ .Values.keycloak.hostName }}
-  KC_DB_USERNAME: {{ .Values.keycloak.databaseUser }}
-  KC_DB_URL: {{ .Values.keycloak.databaseUrl }}
+  KC_DB_USERNAME: {{ .Values.mariadb.auth.username }}
+  KC_DB_URL: jdbc:mariadb://{{ .Release.Name }}-database.{{ .Release.Namespace }}.svc.cluster.local
   KEYCLOAK_ADMIN: {{ .Values.keycloak.adminUser }}

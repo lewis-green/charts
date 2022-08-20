@@ -1,11 +1,10 @@
 ingress:
-  host: keycloak.domain
-  className: ""
-  certManagerIssuer: "letsencrypt"
+  className: 
+  certManagerIssuer: letsencrypt
 
 image:
-  registry: core.harbor.jsm.systems/jsm
-  name: keycloak-jsm
+  registry: harbor.apps.lewisgreen.co.uk/lewisgreen
+  name: keycloak-mariadb
   tag: latest
   pullPolicy: Always
   credentials:
@@ -18,9 +17,18 @@ persistence:
 
 keycloak:
   hostName: keycloak.local
-  databaseName: keycloak
-  databaseUrl: jdbc:sqlserver://dbhost;DatabaseName=keycloak
-  databaseUser: sa
-  databasePassword: 'sa!'
   adminUser: admin
-  adminPassword: 'admin'
+  adminPassword: 
+
+mariadb:
+  enabled: false
+  architecture: standalone
+  auth:
+    database: keycloak
+    username: keycloak
+    password: keycloakpass
+    rootPassword: keycloakrootpass
+  primary:
+    persistence:
+      enabled: false
+      storageClass: 
