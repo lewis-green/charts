@@ -1,0 +1,22 @@
+---
+apiVersion: v2
+appVersion: 3.0.2
+description: Node-RED is low-code programming for event-driven applications
+name: node-red
+version: 1.0.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - nodered
+  - node-red
+home: https://github.com/lewis-green/charts/tree/main/charts/node-red
+icon: https://nodered.org/about/resources/media/node-red-icon-2.png
+sources:
+  - https://github.com/node-red/node-red-docker
+  - https://github.com/lewis-green/charts/tree/main/charts/node-red
+maintainers:
+  - name: lewis-green
+    email: lewis@lewisgreen.co.uk
+dependencies:
+  - name: common
+    repository: http://charts.lewisgreen.co.uk/
+    version: 0.1.0
