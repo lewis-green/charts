@@ -1,0 +1,6 @@
+dependencies:
+- name: common
+  repository: http://charts.lewisgreen.co.uk
+  version: 0.1.0
+digest: sha256:a563877b3b6eee646118a25cad8590cb790c91c699a5ba0a772e2ac72fcca54a
+generated: "2022-08-21T15:37:59.8571031+01:00"
