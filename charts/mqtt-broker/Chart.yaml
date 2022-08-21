@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 1.0.0
 description: MQTT Broker based on Aedes
 name: mqtt-broker
-version: 1.0.0
+version: 1.0.1
 kubeVersion: ">=1.16.0-0"
 keywords:
   - aedes
