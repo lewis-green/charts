@@ -216,6 +216,31 @@ entries:
     urls:
     - https://github.com/lewis-green/charts/releases/download/keycloak-0.1.0/keycloak-0.1.0.tgz
     version: 0.1.0
+  mqtt-broker:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-08-21T16:12:22.209966326Z"
+    dependencies:
+    - name: common
+      repository: https://charts.lewisgreen.co.uk
+      version: 0.1.0
+    description: MQTT Broker based on Aedes
+    digest: 28249809b7c340342a098985bb905b843fc3c51ccfaf7d925e90bc82c424c4e4
+    home: https://github.com/lewis-green/charts/tree/main/charts/mqtt-broker
+    keywords:
+    - aedes
+    - mqtt-broker
+    - mqtt
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: lewis@lewisgreen.co.uk
+      name: lewis-green
+    name: mqtt-broker
+    sources:
+    - https://github.com/lewis-green/charts/tree/main/charts/mqtt-broker
+    urls:
+    - https://github.com/lewis-green/charts/releases/download/mqtt-broker-1.0.1/mqtt-broker-1.0.1.tgz
+    version: 1.0.1
   node-red:
   - apiVersion: v2
     appVersion: 3.0.2
@@ -242,4 +267,4 @@ entries:
     urls:
     - https://github.com/lewis-green/charts/releases/download/node-red-1.0.0/node-red-1.0.0.tgz
     version: 1.0.0
-generated: "2022-08-20T17:53:42.585846877Z"
+generated: "2022-08-21T16:12:22.210270201Z"
