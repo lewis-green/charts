@@ -58,6 +58,31 @@ entries:
   home-assistant:
   - apiVersion: v2
     appVersion: "2022.8"
+    created: "2022-08-22T14:48:27.012030102Z"
+    dependencies:
+    - name: common
+      repository: https://charts.lewisgreen.co.uk
+      version: 0.2.1
+    description: Home Assistant
+    digest: 03dfd80fd3a9e051601c7a392521d9bc85c2fe0bdca1833f2df600c0392b9131
+    home: https://github.com/lewis-green/charts/tree/main/charts/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: lewis@lewisgreen.co.uk
+      name: lewis-green
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/lewis-green/charts/tree/main/charts/home-assistant
+    urls:
+    - https://github.com/lewis-green/charts/releases/download/home-assistant-1.1.1/home-assistant-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
+    appVersion: "2022.8"
     created: "2022-08-22T13:28:10.87159519Z"
     dependencies:
     - name: common
@@ -328,4 +353,4 @@ entries:
     urls:
     - https://github.com/lewis-green/charts/releases/download/node-red-1.0.0/node-red-1.0.0.tgz
     version: 1.0.0
-generated: "2022-08-22T13:39:02.623925618Z"
+generated: "2022-08-22T14:48:27.012145102Z"
