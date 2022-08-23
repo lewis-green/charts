@@ -52,3 +52,24 @@ persistence:
     accessMode: ReadWriteOnce
     size: 1Gi
     mountPath: /data
+
+# -- Pod Security Context see [values.yaml](values.yaml)
+podSecurityContext:
+  # -- node-red group is 1000
+  fsGroup: 1000
+  # -- node-red user is 1000
+  runAsUser: 1000
+
+# -- Security Context see [values.yaml](values.yaml)
+securityContext:
+  privileged: false
+  runAsNonRoot: true
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  runAsGroup: 10003
+  runAsUser: 10003
+  seccompProfile:
+    type: RuntimeDefault
+  capabilities:
+    drop:
+      - ALL
