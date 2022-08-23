@@ -330,6 +330,31 @@ entries:
   node-red:
   - apiVersion: v2
     appVersion: 3.0.2
+    created: "2022-08-23T10:38:44.91107048Z"
+    dependencies:
+    - name: common
+      repository: https://charts.lewisgreen.co.uk
+      version: 0.1.0
+    description: Node-RED is low-code programming for event-driven applications
+    digest: 33286df1ad70cef82aab5a6e75d68544091245f7a6d0b3e4a63a1426da34be26
+    home: https://github.com/lewis-green/charts/tree/main/charts/node-red
+    icon: https://nodered.org/about/resources/media/node-red-icon-2.png
+    keywords:
+    - nodered
+    - node-red
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: lewis@lewisgreen.co.uk
+      name: lewis-green
+    name: node-red
+    sources:
+    - https://github.com/node-red/node-red-docker
+    - https://github.com/lewis-green/charts/tree/main/charts/node-red
+    urls:
+    - https://github.com/lewis-green/charts/releases/download/node-red-1.0.1/node-red-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 3.0.2
     created: "2022-08-20T13:39:05.726082859Z"
     dependencies:
     - name: common
@@ -353,4 +378,4 @@ entries:
     urls:
     - https://github.com/lewis-green/charts/releases/download/node-red-1.0.0/node-red-1.0.0.tgz
     version: 1.0.0
-generated: "2022-08-22T14:48:27.012145102Z"
+generated: "2022-08-23T10:38:44.91110108Z"
